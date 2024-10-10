@@ -1,4 +1,3 @@
-import Overview from "../dashboard/Overview";
+import Owerview from "./owerview";
 
-
-export {Overview}
+export {Owerview}

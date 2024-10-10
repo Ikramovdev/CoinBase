@@ -1,12 +1,14 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Overview from './owerview'
+import {Owerview} from "../../pages/dashboard"
 
-function DashboardRoutes() {
+
+const DashboardRoutes = () => {
   return (
-    <Routes>
-        <Route path='/' element={<Overview/>}/>
-    </Routes>  )
+      <Routes>
+            <Route path='/' element={<Owerview/>}/>
+      </Routes>
+  ) 
 }
 
 export default DashboardRoutes

@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Button({title, type}) {
+const Button = ({type,title}) => {
   return (
-    <button type={type} className='button w-[132px] py-[12px] text-center block rounded-[100px] text-white mx-auto'>{title}</button>
+    <button className='login-button block mx-auto w-[134px] py-[13px] rounded-[100px] text-white text-[10px] font-regular leading-[15px]'type='{type}' >{title}</button>
   )
 }
 

@@ -1,13 +1,14 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { SignIn, SignUp } from '../../pages/Login'
+import {SignIn,SignUp} from "../../pages/login"
 
-function LoginRoutes() {
+
+const LoginRoutes = () => {
   return (
-    <Routes>
+   <Routes>
         <Route path='/' element={<SignIn/>}/>
         <Route path='/sign-up' element={<SignUp/>}/>
-    </Routes>
+   </Routes>
   )
 }
 

@@ -1,44 +1,37 @@
 import React, { useContext } from 'react'
-import { SiteLogo } from '../../assets/images/icon'
+import {SiteLogo} from "../../assets/images/Icon"
 import { Link } from 'react-router-dom'
 import Button from '../../components/Button'
-import { Context } from '../../context/Context'
-import toast, { Toaster } from 'react-hot-toast'
+import { Context } from '../../context/context'
 
-
-function SignIn() {
-  const {token, setToken} = useContext(Context)
+const SignIn = () => {
+  const {token,setToken} = useContext(Context)
   function handleSignInSubmit(e){
-    e.preventDefault()
+    e.preventdefault()
     const data = {
       email:e.target.email.value,
-      password: e.target.password.value
+      password:e.target.password.value
     }
-    if(data.email == "B20@gmail.com" && data.password == "123"){
+    if(data.email == "mubinullakh@gmail.com" && data.password == "123"){
       setToken(data)
-    }
-    else{
-      toast.error("User not found")
     }
   }
   return (
-    <div className='flex items-center flex-col justify-center py-[63px]'>
-      <Toaster position="top-center" reverseOrder={false}/>
-      <Toaster position="top-center" reverseOrder={false}/>
-        <a href="inline-block"><SiteLogo/></a>
-        <h2 className='text-[25px] leading-[37px] font-bold text-white'>Sign In</h2>
-        <form onSubmit={handleSignInSubmit} className='w-[362px] mx-auto' autoComplete='off'>
-            <label className='mb-[27px]'>
-                <strong className='text-[12px] leading-[16px] text-white mb-[17px] inline-block outline-none'>Email</strong>
-                <input className='w-full py-[23px] pl-[34px] rounded-[100px]' type="email" placeholder='Email' name='email' required/>
-            </label>
-            <label className='mb-[27px]'>
-                <strong className='text-[12px] leading-[16px] text-white mb-[17px] inline-block outline-none'>Password</strong>
-                <input className='w-full py-[23px] pl-[34px] rounded-[100px]' type="password" placeholder='Password' name='password' required/>
-            </label>
-            <Link className='mt-[9px] text-[10px] leading-[15px] mb-[7px] text-white block text-center' to={"/sign-up"}>Sign Up</Link>
-            <Button type={"submit"} title={"Sign In"}/>
-        </form>
+    <div className='text-center flex flex-col items-center pt-[63px]'>
+      <SiteLogo/>
+      <h2 className='text-white font-bold text-[25px] leading-[37px] mt-[18px] mb-[10px]'>Sign In</h2>
+      <form onSubmit={handleSignInSubmit} className='w-[362px] text-start' autoComplete='off'>
+        <label className='flex flex-col mb-[27px]'>
+          <span className='text-[15px] text-white mb-[17px]'>Email</span>
+          <input className='py-[23px] pl-[34px] pr-[5px] rounded-[130px] focus:shadow-md focus:shadow-white' type="email" name="email" placeholder='Email' required/>
+        </label>
+        <label className='flex flex-col'>
+          <span className='text-[15px] text-white mb-[17px]'>Password</span>
+          <input className='py-[23px] pl-[34px] pr-[5px] rounded-[130px] focus:shadow-md focus:shadow-white' type="password" name="email" placeholder='XXXXXXXXXX' required/>
+        </label>
+        <Link to={"/sign-Up"} className='text-white text-[10px] leading-[15px] font-regular my-[10px] block text-center hover:scale-[1.4] duration-300'>Sign Up</Link>
+        <Button title={"SignIn"} type={"submit"}/>
+      </form>
     </div>
   )
 }
