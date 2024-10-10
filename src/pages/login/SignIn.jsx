@@ -27,7 +27,7 @@ const SignIn = () => {
         </label>
         <label className='flex flex-col'>
           <span className='text-[15px] text-white mb-[17px]'>Password</span>
-          <input className='py-[23px] pl-[34px] pr-[5px] rounded-[130px] focus:shadow-md focus:shadow-white' type="password" name="email" placeholder='XXXXXXXXXX' required/>
+          <input className='py-[23px] pl-[34px] pr-[5px] rounded-[130px] focus:shadow-md focus:shadow-white' type="password" name="password" placeholder='XXXXXXXXXX' required/>
         </label>
         <Link to={"/sign-Up"} className='text-white text-[10px] leading-[15px] font-regular my-[10px] block text-center hover:scale-[1.4] duration-300'>Sign Up</Link>
         <Button title={"SignIn"} type={"submit"}/>

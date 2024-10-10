@@ -5,7 +5,7 @@ import { Context } from './context/context'
 import DashboardRoutes from './routes/dashboard'
 
 function App() {
-  const token = useContext(Context)
+  const {token} = useContext(Context)
   if(token){
     return <DashboardRoutes/>
   }
