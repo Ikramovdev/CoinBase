@@ -65,12 +65,9 @@ const Navbar = () => {
 
 ]
   return (
-    <div className='w-[20%] h-[100vh] overflow-y-auto border-r-[2px] border-white pt-[44px] pl-[17px]' >
+    <div className='w-[20%] h-[100vh] overflow-y-auto border-r-[2px] border-white pt-[44px]' >
       {navbarList.map(item => {
-        <NavLink to={item.path}>
-            {item.icon}
-            <span>{item.title}</span>
-        </NavLink>
+        <NavLink className={`pl-[17px] flex items-center space-x-[21px]`} to={item.path}>{item.icon}<span className='text-white text-[15px] font-regular'>{item.title}</span></NavLink>
       })}
     </div>
   )
