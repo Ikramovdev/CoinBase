@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import {Agents, BitcoinEthereum, Cards, Owerview, Payments, Statistics, Transactions, Users} from "../../pages/dashboard"
+import {Agents, AgentsAdd, BitcoinEthereum, Cards, Owerview, Payments, Statistics, Transactions, Users} from "../../pages/dashboard"
 import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
 
@@ -15,6 +15,7 @@ const DashboardRoutes = () => {
                           <Route path='/' element={<Owerview/>}/>
                           <Route path='/users' element={<Users/>}/>
                           <Route path='/agents' element={<Agents/>}/>
+                          <Route path='/agents/add' element={<AgentsAdd/>}/>
                           <Route path='/cards' element={<Cards/>}/>
                           <Route path='/bitcoin-ethereum' element={<BitcoinEthereum/>}/>
                           <Route path='/payments' element={<Payments/>}/>

@@ -130,5 +130,53 @@ function StatisticsIcon(){
         </svg>
 )
 }
+// pages icon end
 
-export {SiteLogo,OwerviewIcon,UsersIcon,AgentsIcon,CardsIcon,BitcoinEthereumIcon,PaymentsIcon,TransactionsIcon,StatisticsIcon}
+function LogAutIcon(){
+    return(
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 17C4.58172 17 1 13.4183 1 9C1 4.58172 4.58172 1 9 1C13.4183 1 17 4.58172 17 9C17 13.4183 13.4183 17 9 17Z" stroke="white"/>
+            <path d="M17 9H6.71429" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M9 6.71387L6.25714 8.99958L9 11.2853" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+
+    )
+}
+
+function DeleteIcon(){
+    return(
+        <svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.475" y="3.32461" width="14.05" height="0.95" rx="0.475" fill="white" stroke="#979797" strokeWidth="0.95"/>
+            <path d="M4.0293 0.999999C4.0293 0.723857 4.25315 0.5 4.5293 0.5H10.4705C10.7466 0.5 10.9705 0.723858 10.9705 1V1.4H4.0293V0.999999Z" fill="white" stroke="#979797" strokeWidth="0.95"/>
+            <mask id="path-3-inside-1_105_526" fill="white">
+            <rect x="1.76465" y="2.84961" width="11.4706" height="16.15" rx="1"/>
+            </mask>
+            <rect x="1.76465" y="2.84961" width="11.4706" height="16.15" rx="1" stroke="white" strokeWidth="4" mask="url(#path-3-inside-1_105_526)"/>
+            <rect x="2.64746" y="14.25" width="9.70588" height="2.85" fill="white"/>
+        </svg>
+
+    )
+}
+function MoreIcon(){
+    return(
+        <svg width="16" height="4" viewBox="0 0 16 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.86673 3.73333C0.8358 3.73333 6.50883e-05 2.8976 6.50883e-05 1.86667C6.50883e-05 0.835735 0.8358 0 1.86673 0C2.89766 0 3.7334 0.835735 3.7334 1.86667C3.7334 2.8976 2.89766 3.73333 1.86673 3.73333Z" fill="white"/>
+            <path d="M7.99954 3.73333C6.96861 3.73333 6.13288 2.8976 6.13288 1.86667C6.13288 0.835735 6.96861 0 7.99954 0C9.03048 0 9.86621 0.835735 9.86621 1.86667C9.86621 2.8976 9.03048 3.73333 7.99954 3.73333Z" fill="white"/>
+            <path d="M14.1333 3.73333C13.1024 3.73333 12.2667 2.8976 12.2667 1.86667C12.2667 0.835735 13.1024 0 14.1333 0C15.1643 0 16 0.835735 16 1.86667C16 2.8976 15.1643 3.73333 14.1333 3.73333Z" fill="white"/>
+        </svg>
+
+    )
+}
+
+function UploadImg(){
+    return(
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 33.7813L16.4264 20.2832L29.9246 33.7813" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M8.71322 1H39.5661C43.8084 1 47.2793 4.47095 47.2793 8.71322V39.5661C47.2793 43.8084 43.8084 47.2793 39.5661 47.2793H8.71322C4.47095 47.2793 1 43.8084 1 39.5661V8.71322C1 4.47095 4.47095 1 8.71322 1Z" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M47.2791 33.7816L39.5659 26.0684L30.1172 33.9744" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M30.8891 22.2109C33.5516 22.2109 35.7099 20.0525 35.7099 17.3901C35.7099 14.7277 33.5516 12.5693 30.8891 12.5693C28.2267 12.5693 26.0684 14.7277 26.0684 17.3901C26.0684 20.0525 28.2267 22.2109 30.8891 22.2109Z" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+
+    )
+}
+export {SiteLogo,OwerviewIcon,UsersIcon,AgentsIcon,CardsIcon,BitcoinEthereumIcon,PaymentsIcon,TransactionsIcon,StatisticsIcon,LogAutIcon,DeleteIcon,MoreIcon,UploadImg}
