@@ -4,11 +4,10 @@ import {Agents, BitcoinEthereum, Cards, Owerview, Payments, Statistics, Transact
 import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
 
-
 const DashboardRoutes = () => {
   return (
         <div>
-          <Header/>'
+          <Header/>
           <div className='flex items-center justify-between'>
               <Navbar/>
               <div className='w-[80%] h-[100vh] overflow-y-auto'>
