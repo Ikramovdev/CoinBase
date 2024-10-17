@@ -18,7 +18,7 @@ const AgentsAdd = () => {
     e.preventDefault()
     const data = {
       id: agents.length,
-      isChacked:true,
+      Checked:false,
       status:true,
       img:imgUrl,
       username:userName,

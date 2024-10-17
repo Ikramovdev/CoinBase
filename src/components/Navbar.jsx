@@ -84,8 +84,8 @@ const Navbar = () => {
       <button onClick={() => setOpenModal(true)} className='flex py-[18px] items-center gap-5 pl-[15px] hover:scale-[1.2] duration-300'>
         <LogAutIcon/>
         <span className='font-regular text-[12px] leading-[18px] text-white'>Logout</span>
-        <Modal title="Do you really want to exit the admin panel?" open={openModal} onOk={handleSureLogout} onCancel={() => setOpenModal(false)}/>
       </button>
+        <Modal title="Do you really want to exit the admin panel?" open={openModal} onOk={handleSureLogout} onCancel={() => setOpenModal(false)}/>
     </div>
   )
 }
