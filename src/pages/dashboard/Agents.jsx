@@ -10,6 +10,7 @@ import Loading from "../../assets/images/loading.png"
 
 const Agents = () => {
   const {agents,setAgents} = useContext(Context)
+  const [allAgents,setAllAgents] = useState(agents)
   const [checkAll,setCheckAll] = useState(JSON.parse(localStorage.getItem("checkAll")) || false)
   const [deleteModal,setDeleteModal] = useState(false)
   const [deleteId,setDeleteId] = useState(null)
@@ -24,7 +25,7 @@ const Agents = () => {
     else {
       agents.forEach(item => item.isChecked = false)
     }
-    setAgents([...agents]);
+    setAllAgents([...agents]);
   }
 
   // delete part start   
@@ -46,20 +47,19 @@ const Agents = () => {
 
   // search part 
 
-  const allAgents = JSON.parse(localStorage.getItem("agents"))
   function handleSearchAgent(e){
     setIsLoading(true)
     if(e.target.value){
         const filteredAgent = agents.filter(item => item.username.toLowerCase().includes(e.target.value.toLowerCase()))
         setTimeout(() => {
           setIsLoading(false)
-          setAgents(filteredAgent)
+          setAllAgents(filteredAgent)
         }, 700); 
     }
     else{
       setTimeout(() => {
         setIsLoading(false)
-        setAgents(allAgents)
+        setAllAgents(agents )
       }, 700);
       
     }
@@ -95,7 +95,7 @@ const Agents = () => {
             </tr>
           </thead>
           <tbody>
-            {isLoading ? <div className='flex justify-center w-[320%] mt-5 '><img className='mx-auto' src={Loading} /></div> : agents.map(item => <AgentsItem key={item.id} item={item} handleDeleteBtnClick={handleDeleteBtnClick} />)}
+            {isLoading ? <div className='flex justify-center w-[320%] mt-5 '><img className='mx-auto' src={Loading} /></div> : allAgents.map(item => <AgentsItem key={item.id} item={item} handleDeleteBtnClick={handleDeleteBtnClick} />)}
           </tbody>
         </table>
       </div>

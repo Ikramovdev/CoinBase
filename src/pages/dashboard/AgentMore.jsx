@@ -1,23 +1,26 @@
 import React, { useContext } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Button from '../../components/Button';
-import UserIcon from "../../assets/images/userIcon.svg"
 import { Context } from '../../context/context';
+import { BackIcon } from '../../assets/images/Icon';
 
 const AgentMore = () => {
     const {agents,setAgents} = useContext(Context)
     const {id} = useParams()
+    const navigate = useNavigate()
 
     const singleData = agents.find(item => item.id == id)
   return (
     <div className='p-[50px]'> 
       <p className='font-bold text-[12px] leading-[18px] text-white mb-[33px]'>Admin Management Agents</p>
       <div className='flex items-center justify-between'>
-        <h2 className='font-bold text-[16px] leading-[24px] text-white'>{singleData.username}</h2>
+        <div className='flex items-center space-x-[10px]'>
+            <button onClick={() => navigate(-1)} className='hover:scale-[1.3] duration-300'><BackIcon/></button>
+            <h2 className='font-bold text-[16px] leading-[24px] text-white'>{singleData.username}</h2>
+        </div>
         <div className='flex items-center space-x-[20px]'>
-         <Button onClick={()=> navigate("add")} extraStyle={'w-[134px] flex items-center mx-0 justify-center gap-[7.35px]'}>
-          <img src={UserIcon} alt="userIcon" width={16} height={12} />
-            <span className='font-regular text-[10px] leading-[15px] text-white'>Add Agent</span>
+         <Button onClick={()=> navigate("update")} extraStyle={'w-[134px] flex items-center mx-0 justify-center gap-[7.35px]'}>
+            <span className='font-regular text-[10px] leading-[15px] text-white'> Edit Agent</span>
          </Button>
         </div>
       </div>

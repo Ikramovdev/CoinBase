@@ -17,6 +17,7 @@ const DashboardRoutes = () => {
                           <Route path='/agents' element={<Agents/>}/>
                           <Route path='/agents/:id' element={<AgentMore/>}/>
                           <Route path='/agents/add' element={<AgentsAdd/>}/>
+                          <Route path='/agents/:id/update' element={<AgentsAdd/>}/>
                           <Route path='/cards' element={<Cards/>}/>
                           <Route path='/bitcoin-ethereum' element={<BitcoinEthereum/>}/>
                           <Route path='/payments' element={<Payments/>}/>
