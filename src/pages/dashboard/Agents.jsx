@@ -18,12 +18,12 @@ const Agents = () => {
    const navigate = useNavigate() 
 
   function handleChackAll(e){ 
-    setCheckAll(e.target.Checked)
+    setCheckAll(e.target.checked)
     if(e.target.checked){
-      agents.forEach(item => item.isChecked = true)
+      agents.forEach(item => item.Checked = true)
     }
     else {
-      agents.forEach(item => item.isChecked = false)
+      agents.forEach(item => item.Checked = false)
     }
     setAllAgents([...agents]);
   }

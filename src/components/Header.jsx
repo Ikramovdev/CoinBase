@@ -1,5 +1,5 @@
 import React from 'react'
-import DashboardLogo  from '../assets/images/Dashboard-logo.svg'
+import DashboardLogo  from '../assets/images/DashboardLogo.svg'
 import LogoPart from "../assets/images/LogoPart.svg"
 import Bell from "../assets/images/bell.svg"
 import { Badge } from 'antd'

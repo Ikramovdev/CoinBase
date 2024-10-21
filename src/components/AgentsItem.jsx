@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom'
 const AgentsItem = ({item,handleDeleteBtnClick}) => {
     const {agents,setAgents} = useContext(Context)
     const [isPending,setIsPending] = useState(false)
-    const [isChecked,setisChecked] = useState(item.isChecked)
     const navigate = useNavigate()
 
     function handleStatusClickBtn(){
@@ -20,12 +19,13 @@ const AgentsItem = ({item,handleDeleteBtnClick}) => {
     }
     function handleChakedBtn(){
         item.Checked = !item.Checked
+        setAgents([...agents])
     }
      
   return (
     <tr className='border-[2px] border-white'>
         <td className='space-x-[15px] py-[19px] pl-5'>
-        <Checkbox chacked={isChecked}  onChange={handleChakedBtn}></Checkbox>
+        <Checkbox checked={item.checked}  onChange={handleChakedBtn}></Checkbox>
         <button onClick={handleStatusClickBtn} className={`${isPending ? "active-pending":(item.status ? `bg-green-400`:`bg-red-500`)} w-[91px] font-bold text-[12px] leading-[18px] py-[6px] text-center text-white rounded-[215px] duration-300`}>{isPending ? "Pending" :item.status ? "Active":"Down"}</button>
         </td>
         <td className='flex items-center justify-center space-x-[17px] py-[19px]'> 
